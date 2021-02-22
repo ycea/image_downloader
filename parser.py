@@ -5,7 +5,7 @@ import re
 from time import sleep
 
 
-class Picture Detective(Thread):
+class PictureDetective(Thread):
     def  __init__(self, url_on_page: str, base_url, pattern_for_posts,):
         super().__init__()
         # target to collect posts 
