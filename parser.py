@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from threading import Thread
 import re
-
+from time import sleep
 
 class PictureDetective(Thread):
     def  __init__(self, url_on_page: str, base_url, pattern_for_posts,):
@@ -40,6 +40,7 @@ class ImageGrabber(Thread):
     def run(self): # run is method to use threads
         headers = {"User-Agent": "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)"}
         content_list = []
+        sleep(5) # it needs to start most of threads
         for post in self.list_of_urls:
             soup = make_soup(post)
             image = soup.find(href=re.compile(self.pattern_for_content))
