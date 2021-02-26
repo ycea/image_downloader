@@ -34,11 +34,11 @@ class ImageGrabber(Thread):
         self.base_url = base_url
         # path where conent is will be saved
         self.filepath = filepath
-        # num is special id for content
+        # num is special id for content files
         self.num = num
         # special attribute to collect  
         slef.attr = attr
-    def run(self):
+    def run(self): # run is method to use threads
         headers = {"User-Agent": "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)"}
         content_list = []
         for post in self.list_of_urls:
