@@ -2,7 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 from threading import Thread
 import re
-from time import sleep
 
 
 class PictureDetective(Thread):
